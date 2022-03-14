@@ -1,0 +1,46 @@
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/top-bar.ejs') %>
+            <div class="container">
+                <h3>Membros</h3>
+            </div>
+            <div class="container">
+                <hr>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <% membros.forEach(membro=>{%>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <%= membro.id %>
+                                </th>
+                                <th>
+                                    <%=membro.nome%>
+                                        <%=membro.sobrenome%>
+                                </th>
+                                <th>
+                                    <%=membro.telefone%>
+                                </th>
+                                <th>
+                                    <%=membro.email%>
+                                </th>
+                                <th>
+                                    <button class="btn btn-primary">consultar</button>
+                                </th>
+                            </tr>
+                        </tbody>
+                        <%})%>
+                </table>
+
+            </div>
+    </body>
+
+    <%- include('./partials/footer.ejs') %>

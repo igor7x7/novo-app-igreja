@@ -1,0 +1,193 @@
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <%- include('./partials/top-bar.ejs') %>
+            <div class="container">
+                <h3>Cadastrar novo membro</h3>
+                <hr>
+                <!--Nome e sobrenome-->
+                <form method="POST" action="/cadastrar" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label">Nome</label>
+                        <input type="name" class="form-control" id="inputName" name="nome">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputSobrenome" class="form-label">Sobrenome</label>
+                        <input type="sobrenome" class="form-control" id="inputSobrenome" name="sobrenome">
+                    </div>
+                    <!--Sexo-->
+                    <fieldset class="col-md-6">
+                        <legend class="col-form-label pt-0">Sexo:</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="inlineRadio1"
+                                    value="Masculino">
+                                <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="inlineRadio2"
+                                    value="Feminino">
+                                <label class="form-check-label" for="inlineRadio2">Feminino</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--Data de nascimento-->
+                    <div class="col-md-6">
+                        <label for="inputDate" class="form-label">Data de nascimento:</label>
+                        <input type="date" class="form-control" id="inputDate" name="nascimento">
+                    </div>
+                    <!--Estado civil-->
+                    <fieldset class="col-md-6">
+                        <legend class="col-form-label  pt-0">Estado civil:</legend>
+
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="estadoCivil" id="inlineRadio1"
+                                    value="Casado">
+                                <label class="form-check-label" for="inlineRadio1">Casado</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="estadoCivil" id="inlineRadio2"
+                                    value="Solteiro">
+                                <label class="form-check-label" for="inlineRadio2">Solteiro</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--Nome do cônjuge-->
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label">Nome do cônjuge</label>
+                        <input type="text" class="form-control" id="inputName" name="nomeConjuge">
+                    </div>
+                    <!--Telefone-->
+                    <div class="col-md-6">
+                        <label for="inputTelefone" class="form-label">Número de telefone</label>
+                        <input type="phone" class="form-control" id="inputTelefone" name="telefone">
+                    </div>
+                    <!--E-mail-->
+                    <div class="col-md-6">
+                        <label for="inputEmail" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-group-text" for="inputGroupSelect01">Escolaridade</label>
+                        <select class="form-select" id="inputGroupSelect01" name="escolaridade">
+                            <option value="" selected></option>
+                            <option value="ensinoBásico">Ensino básico</option>
+                            <option value="fundamentalIncompleto">Fundamental incompleto</option>
+                            <option value="fundamentalCompleto">Fundamental completo</option>
+                            <option value="médioIncompleto">Ensino médio incompleto</option>
+                            <option value="médioCompleto">Ensino médio completo</option>
+                            <option value="superiorIncompleto">Ensino superior incompleto</option>
+                            <option value="superiorCompleto">Ensino superior completo</option>
+                        </select>
+                    </div>
+                    <hr>
+
+                    <!--Endereço-->
+
+                    <legend class="col-form-label pt-0"><strong> Endereço: </strong></legend>
+                    <div class="col-md-6">
+                        <label for="CEP" class="form-label">CEP</label>
+                        <input type="CEP" class="form-control" id="CEP" name="cep">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="logradouro" class="form-label">Logradouro</label>
+                        <input type="text" class="form-control" id="logradouro" name="logradouro">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" name="bairro">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" name="cidade">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label" for="inputEstado">Estado</label>
+                        <select id="inputEstado" class="form-control" name="estado">
+                            <option value=""></option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="col-md-6">
+                        <label for="inputDate-adm" class="form-label">Data de Admição:</label>
+                        <input type="date" class="form-control" id="inputDate-adm" name="dataAdm">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="recebido" class="form-label">Recebido por:</label>
+                        <input type="text" class="form-control" id="recebido" name="recebido">
+                    </div>
+
+                    <fieldset class="col-md-6">
+                        <legend class="col-form-label  pt-0">Condição:</legend>
+
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="condicao" id="inlineRadio1"
+                                    value="Ativo">
+                                <label class="form-check-label" for="inlineRadio1">Ativo</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="condicao" id="inlineRadio2"
+                                    value="Inativo">
+                                <label class="form-check-label" for="inlineRadio2">Inativo</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="col-md-6">
+                        <label for="inputDate-btsm" class="form-label">Data de batismo:</label>
+                        <input type="date" class="form-control" id="inputDate-btsm" name="batismo">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="cargo" class="form-label">Cargo eclesiástico:</label>
+                        <input type="text" class="form-control" id="cargo" name="cargo">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nome-igr" class="form-label">Nome da Igreja:</label>
+                        <input type="text" class="form-control" id="nome-igr" name="nomeIgreja">
+                    </div>
+
+
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+    </body>
+
+    <%- include('./partials/footer.ejs') %>
