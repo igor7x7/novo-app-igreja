@@ -4,7 +4,8 @@
   "description": "Um app para cadastro de membros de uma igreja",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && gh-pages -d novo-app-igreja -b master"
   },
   "bin": "index.js",
   "pkg": {
@@ -23,5 +24,8 @@
     "express": "^4.17.1",
     "mysql2": "^2.3.3",
     "sequelize": "^7.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
